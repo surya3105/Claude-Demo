@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDF8F4;
+  --color-blush: #F9F0EB;
+  --color-rose: #C41E56;
+  --color-dusty-rose: #9B1B4D;
+  --color-gold: #D4A017;
+  --color-gold-light: #F0D060;
+  --color-sage: #2D6B4F;
+  --color-charcoal: #1A1A1A;
+  --color-warm-gray: #5A4A4A;
+  --color-deep-teal: #0D3B3B;
+  --color-magenta: #C41E56;
+  --color-emerald: #1B5E4B;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 160, 23, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(212, 160, 23, 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
